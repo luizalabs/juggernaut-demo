@@ -1,9 +1,10 @@
 import { createGlobalStyle } from 'styled-components'
 
 const globalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    margin: 0;
+    font-family: 'Roboto', sans-serif;
   }
 `
 

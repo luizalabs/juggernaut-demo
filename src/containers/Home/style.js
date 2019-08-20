@@ -12,14 +12,7 @@ const StyledTitle = styled(Typography)`
   margin-bottom: 10px;
 `
 
-const StyledSubtitle = styled(Typography)`
-  font-style: italic;
-  font-weight: 400;
-  margin: 0;
-`
-
 export {
   StyledContainer,
-  StyledTitle,
-  StyledSubtitle
+  StyledTitle
 }
