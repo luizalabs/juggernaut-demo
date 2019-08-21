@@ -1,18 +1,29 @@
 import styled from 'styled-components'
-import { Typography } from '@material-ui/core'
+import { Card, CardContent, Grid, CardMedia } from '@material-ui/core'
 
-const StyledContainer = styled.div`
-  background: ${({ theme }) => theme.palette.primary.background};
-  height: 100vh;
-  text-align: center;
+const GridItemStyled = styled(Grid)`
+  flex-grow: 1;
 `
 
-const StyledTitle = styled(Typography)`
-  margin: 0;
-  margin-bottom: 10px;
+const CardStyled = styled(Card)`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+`
+
+const CardContentStyled = styled(CardContent)`
+  flex-grow: 1;
+`
+
+const CardMediaStyled = styled(CardMedia)`
+  height: 0;
+  padding-top: 65%;
 `
 
 export {
-  StyledContainer,
-  StyledTitle
+  GridItemStyled,
+  CardStyled,
+  CardContentStyled,
+  CardMediaStyled
 }

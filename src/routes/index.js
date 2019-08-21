@@ -1,7 +1,9 @@
-import Home from './home'
+import home from './home'
+import demo from './demo'
 
 const routes = [
-  ...Home
+  ...home,
+  ...demo
 ]
 
 export default routes
