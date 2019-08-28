@@ -1,31 +1,27 @@
-import React from 'react';
+import React from 'react'
+import Box from '@material-ui/core/Box'
+import Button from '@material-ui/core/Button'
+import Checkbox from '@material-ui/core/Checkbox'
+import Container from '@material-ui/core/Container'
+import FormControlLabel from '@material-ui/core/FormControlLabel'
+import Grid from '@material-ui/core/Grid'
+import Link from '@material-ui/core/Link'
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined'
+import TextField from '@material-ui/core/TextField'
+import Typography from '@material-ui/core/Typography'
+import { FormContainerStyled, FormStyled, AvatarStyled } from './style'
 
-import Box from '@material-ui/core/Box';
-import Checkbox from '@material-ui/core/Checkbox';
-import Container from '@material-ui/core/Container';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Grid from '@material-ui/core/Grid';
-import Link from '@material-ui/core/Link';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import TextField from '@material-ui/core/TextField';
-import Typography from '@material-ui/core/Typography';
-
-import { FormContainer, Form, AvatarStyled, ButtonStyled } from './style'
-
-export default function SignIn() {
-
+const SignIn = () => {
   return (
     <Container component="main" maxWidth="xs">
-      <CssBaseline />
-      <FormContainer>
+      <FormContainerStyled>
         <AvatarStyled>
           <LockOutlinedIcon />
         </AvatarStyled>
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
-        <Form noValidate>
+        <FormStyled noValidate>
           <TextField
             variant="outlined"
             margin="normal"
@@ -52,14 +48,15 @@ export default function SignIn() {
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
           />
-          <ButtonStyled
+          <Button
             type="submit"
             fullWidth
             variant="contained"
             color="primary"
+            className="pt-2 mb-2"
           >
             Sign In
-          </ButtonStyled>
+          </Button>
           <Grid container>
             <Grid item xs>
               <Link href="#" variant="body2">
@@ -72,8 +69,8 @@ export default function SignIn() {
               </Link>
             </Grid>
           </Grid>
-        </Form>
-      </FormContainer>
+        </FormStyled>
+      </FormContainerStyled>
       <Box mt={8}>
         <Typography variant="body2" color="textSecondary" align="center">
           {'Juggernaut Demo - '}
@@ -81,5 +78,7 @@ export default function SignIn() {
         </Typography>
       </Box>
     </Container>
-  );
+  )
 }
+
+export default SignIn
