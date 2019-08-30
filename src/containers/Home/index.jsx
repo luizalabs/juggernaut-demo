@@ -1,6 +1,7 @@
 import React from 'react'
 import { Grid, Typography, CardActions, Button, Container } from '@material-ui/core'
 import { GridItemStyled, CardStyled, CardMediaStyled, CardContentStyled } from './style'
+import ModalScreenShot from 'assets/images/modal-screenshot.png'
 
 const layouts = [
   {
@@ -9,6 +10,13 @@ const layouts = [
     src: 'https://material-ui.com/static/images/templates/sign-in.png',
     href: '/demo/sign-in/',
     source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/SignIn'
+  },
+  {
+    title: 'Modal',
+    description: 'Simple modal examples.',
+    src: ModalScreenShot,
+    href: '/demo/modal/',
+    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/Modal'
   }
 ]
 
