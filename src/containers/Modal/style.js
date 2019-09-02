@@ -17,7 +17,7 @@ const Container = styled(Grid)`
 const MaxWidthModalForm = styled.form`
     margin: auto;
     display: flex;
-    width: fit-content;
+    margin: 0 auto;
     flex-direction: column;
 `
 
