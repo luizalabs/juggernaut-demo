@@ -2,6 +2,7 @@ import React from 'react'
 import { Grid, Typography, CardActions, Button, Container } from '@material-ui/core'
 import signIn from 'assets/img/sign-in.png'
 import signInSide from 'assets/img/sign-in-side.png'
+import signUp from 'assets/img/sign-up.png'
 import modal from 'assets/img/modal.png'
 import logo from 'assets/img/juggernaut.gif'
 import Copyright from './Copyright'
@@ -21,6 +22,13 @@ const layouts = [
     src: signInSide,
     href: '/demo/sign-in-side/',
     source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/SignInSide'
+  },
+  {
+    title: 'Sign Up',
+    description: 'A simple Sign Up page.',
+    src: signUp,
+    href: '/demo/sign-up/',
+    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/SignUp'
   },
   {
     title: 'Modal',
