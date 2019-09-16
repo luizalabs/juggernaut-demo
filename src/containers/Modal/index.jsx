@@ -5,7 +5,7 @@ import FullScreenModal from './FullScreen'
 import MaxWidthModal from './MaxWidth'
 import { ButtonsContainer } from './style'
 
-const Modal = () => {
+function Modal() {
   const [opened, setOpened] = React.useState('')
 
   const handleClose = () => setOpened('')
@@ -22,4 +22,4 @@ const Modal = () => {
   )
 }
 
-export default Modal
+export default React.memo(Modal)

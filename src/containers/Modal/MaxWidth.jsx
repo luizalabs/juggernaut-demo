@@ -16,7 +16,7 @@ import { Container, MaxWidthModalForm } from './style'
 
 const NAME = 'MAX WIDTH MODAL'
 
-const MaxWidth = ({ open, openModal, handleClose }) => {
+function MaxWidth({ open, openModal, handleClose }) {
   const [fullWidth, setFullWidth] = React.useState(true)
   const [maxWidth, setMaxWidth] = React.useState('sm')
 
@@ -86,4 +86,4 @@ MaxWidth.propTypes = {
   openModal: PropTypes.func
 }
 
-export default MaxWidth
+export default React.memo(MaxWidth)
