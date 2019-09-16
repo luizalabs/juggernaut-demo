@@ -11,46 +11,48 @@ import { Container } from './style'
 
 const NAME = 'FORM MODAL'
 
-const Form = ({ open, openModal, handleClose }) => (
+function Form({ open, openModal, handleClose }) {
+  return (
     <Container item xs={12} md={3}>
-        <Button variant="outlined" color="primary" onClick={openModal(NAME)}>
-            Open form modal
-        </Button>
-        <Dialog
-            open={open === NAME}
-            onClose={handleClose}
-        >
-            <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
-            <DialogContent>
-                <DialogContentText>
-                    Modal Content - To subscribe to this website, please enter your email address here.
-                    We will send updates occasionally.
-                </DialogContentText>
-                <TextField
-                    autoFocus
-                    fullWidth
-                    id="name"
-                    type="email"
-                    margin="dense"
-                    label="Email Address"
-                />
-            </DialogContent>
-            <DialogActions>
-                <Button onClick={handleClose} color="primary">
-                    Cancel
-                </Button>
-                <Button onClick={handleClose} color="primary">
-                    Subscribe
-                </Button>
-            </DialogActions>
-        </Dialog>
+      <Button variant="outlined" color="primary" onClick={openModal(NAME)}>
+        Open form modal
+          </Button>
+      <Dialog
+        open={open === NAME}
+        onClose={handleClose}
+      >
+        <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            Modal Content - To subscribe to this website, please enter your email address here.
+            We will send updates occasionally.
+          </DialogContentText>
+          <TextField
+            autoFocus
+            fullWidth
+            id="name"
+            type="email"
+            margin="dense"
+            label="Email Address"
+          />
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} color="primary">
+            Cancel
+          </Button>
+          <Button onClick={handleClose} color="primary">
+            Subscribe
+          </Button>
+        </DialogActions>
+      </Dialog>
     </Container>
-)
-
-Form.propTypes = {
-    open: PropTypes.string,
-    handleClose: PropTypes.func,
-    openModal: PropTypes.func
+  )
 }
 
-export default Form
+Form.propTypes = {
+  open: PropTypes.string,
+  handleClose: PropTypes.func,
+  openModal: PropTypes.func
+}
+
+export default React.memo(Form)

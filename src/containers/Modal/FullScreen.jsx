@@ -17,50 +17,52 @@ import { Container } from './style'
 const NAME = 'FULLSCREEN MODAL'
 
 const Transition = React.forwardRef((props, ref) => (
-    <Slide direction="up" ref={ref} {...props} />
+  <Slide direction="up" ref={ref} {...props} />
 ))
 
-const FullScreen = ({ open, openModal, handleClose }) => (
+function FullScreen({ open, openModal, handleClose }) {
+  return (
     <Container item xs={12} md={3}>
-        <Button variant="outlined" color="primary" onClick={openModal(NAME)}>
-            Open full-screen modal
-        </Button>
-        <Dialog
-            fullScreen
-            open={open === NAME}
-            onClose={handleClose}
-            TransitionComponent={Transition}
-        >
-            <AppBar style={{ position: 'relative' }}>
-                <Toolbar>
-                    <IconButton edge="start" color="inherit" onClick={handleClose} aria-label="close">
-                        <CloseIcon />
-                    </IconButton>
-                    <Typography variant="h6" style={{ flex: 1 }}>
-                        Sound
-                    </Typography>
-                    <Button color="inherit" onClick={handleClose}>
-                        save
-                    </Button>
-                </Toolbar>
-            </AppBar>
-            <List>
-                <ListItem button>
-                    <ListItemText primary="Phone ringtone" secondary="Titania" />
-                </ListItem>
-                <Divider />
-                <ListItem button>
-                    <ListItemText primary="Default notification ringtone" secondary="Tethys" />
-                </ListItem>
-            </List>
-        </Dialog>
+      <Button variant="outlined" color="primary" onClick={openModal(NAME)}>
+        Open full-screen modal
+      </Button>
+      <Dialog
+        fullScreen
+        open={open === NAME}
+        onClose={handleClose}
+        TransitionComponent={Transition}
+      >
+        <AppBar style={{ position: 'relative' }}>
+          <Toolbar>
+            <IconButton edge="start" color="inherit" onClick={handleClose} aria-label="close">
+              <CloseIcon />
+            </IconButton>
+            <Typography variant="h6" style={{ flex: 1 }}>
+              Sound
+            </Typography>
+            <Button color="inherit" onClick={handleClose}>
+              save
+            </Button>
+          </Toolbar>
+        </AppBar>
+        <List>
+          <ListItem button>
+            <ListItemText primary="Phone ringtone" secondary="Titania" />
+          </ListItem>
+          <Divider />
+          <ListItem button>
+            <ListItemText primary="Default notification ringtone" secondary="Tethys" />
+          </ListItem>
+        </List>
+      </Dialog>
     </Container>
-)
-
-FullScreen.propTypes = {
-    open: PropTypes.string,
-    handleClose: PropTypes.func,
-    openModal: PropTypes.func
+  )
 }
 
-export default FullScreen
+FullScreen.propTypes = {
+  open: PropTypes.string,
+  handleClose: PropTypes.func,
+  openModal: PropTypes.func
+}
+
+export default React.memo(FullScreen)
