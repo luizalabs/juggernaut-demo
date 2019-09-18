@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Avatar from '@material-ui/core/Avatar'
+import FormControl from '@material-ui/core/FormControl'
 
 const FormContainerStyled = styled.div`
   margin-top: ${({ theme }) => theme.spacing(8)}px;
@@ -23,9 +24,14 @@ const ErrorStyled = styled.div`
   margin-top: ${({ theme }) => theme.spacing(0.5)}px;
 `
 
+const FormControlStyled = styled(FormControl)`
+  margin-top: ${({ theme }) => theme.spacing(1)}px;
+  min-width: 120px;
+`
 export {
-    AvatarStyled,
-    FormContainerStyled,
-    FormStyled,
-    ErrorStyled
+  AvatarStyled,
+  FormControlStyled,
+  FormContainerStyled,
+  FormStyled,
+  ErrorStyled
 }

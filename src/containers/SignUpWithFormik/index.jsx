@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Formik } from 'formik'
 import * as Yup from 'yup'
 import Button from '@material-ui/core/Button'
@@ -9,10 +9,12 @@ import Checkbox from '@material-ui/core/Checkbox'
 import Link from '@material-ui/core/Link'
 import Grid from '@material-ui/core/Grid'
 import Box from '@material-ui/core/Box'
+import InputLabel from '@material-ui/core/InputLabel'
+import Select from '@material-ui/core/Select'
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined'
 import Typography from '@material-ui/core/Typography'
 import Container from '@material-ui/core/Container'
-import { FormContainerStyled, FormStyled, AvatarStyled, ErrorStyled } from './style'
+import { FormContainerStyled, FormStyled, FormControlStyled, AvatarStyled, ErrorStyled } from './style'
 
 const validationSchema = Yup.object().shape({
   firstName: Yup.string()
@@ -29,7 +31,8 @@ const validationSchema = Yup.object().shape({
   password: Yup.string()
     .min(2, 'Too Short!')
     .max(8, 'Too Long!')
-    .required('Required')
+    .required('Required'),
+  age: Yup.number().required('Required')
 })
 
 const initialValues = {
@@ -37,10 +40,17 @@ const initialValues = {
   lastName: '',
   email: '',
   password: '',
+  age: '',
   allowExtraEmails: false
 }
 
 function SignUpWithFormik() {
+  const inputLabel = useRef(null);
+  const [labelWidth, setLabelWidth] = useState(0);
+  useEffect(() => {
+    setLabelWidth(inputLabel.current.offsetWidth);
+  }, []);
+
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -51,7 +61,6 @@ function SignUpWithFormik() {
         <Typography component="h1" variant="h5">
           Sign up
         </Typography>
-
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
@@ -61,7 +70,7 @@ function SignUpWithFormik() {
           render={({ handleSubmit, handleChange, handleBlur, errors, touched }) => (
             <FormStyled onSubmit={handleSubmit}>
               <Grid container spacing={2}>
-                <Grid item xs={12} sm={6}>
+                <Grid item md={6} sm={6} xs={12}>
                   <TextField
                     name="firstName"
                     variant="outlined"
@@ -76,7 +85,7 @@ function SignUpWithFormik() {
                   />
                   {errors.firstName && touched.firstName ? (<ErrorStyled>{errors.firstName}</ErrorStyled>) : null}
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid item md={6} sm={6} xs={12}>
                   <TextField
                     variant="outlined"
                     required
@@ -90,7 +99,30 @@ function SignUpWithFormik() {
                   />
                   {errors.lastName && touched.lastName ? (<ErrorStyled>{errors.lastName}</ErrorStyled>) : null}
                 </Grid>
-                <Grid item xs={12}>
+                <Grid item md={12} sm={12} xs={12}>
+                  <FormControlStyled variant="outlined" fullWidth>
+                    <InputLabel ref={inputLabel} htmlFor="outlined-age-native-simple">
+                      Age
+                    </InputLabel>
+                    <Select
+                      native
+                      onChange={handleChange('age')}
+                      onBlur={handleBlur}
+                      labelWidth={labelWidth}
+                      inputProps={{
+                        name: 'age',
+                        id: 'outlined-age-native-simple',
+                      }}
+                    >
+                      <option value="" />
+                      <option value={10}>Ten</option>
+                      <option value={20}>Twenty</option>
+                      <option value={30}>Thirty</option>
+                    </Select>
+                    {errors.age && touched.age ? (<ErrorStyled>{errors.age}</ErrorStyled>) : null}
+                  </FormControlStyled>
+                </Grid>
+                <Grid item md={12} sm={12} xs={12}>
                   <TextField
                     variant="outlined"
                     required
@@ -104,7 +136,7 @@ function SignUpWithFormik() {
                   />
                   {errors.email && touched.email ? (<ErrorStyled>{errors.email}</ErrorStyled>) : null}
                 </Grid>
-                <Grid item xs={12}>
+                <Grid item md={12} sm={12} xs={12}>
                   <TextField
                     variant="outlined"
                     required
@@ -119,7 +151,7 @@ function SignUpWithFormik() {
                   />
                   {errors.password && touched.password ? (<ErrorStyled>{errors.password}</ErrorStyled>) : null}
                 </Grid>
-                <Grid item xs={12}>
+                <Grid item md={12} sm={12} xs={12}>
                   <FormControlLabel
                     control={
                       <Checkbox
@@ -140,12 +172,12 @@ function SignUpWithFormik() {
                 className="mt-3 mb-2 mx-0"
               >
                 Sign Up
-          </Button>
+              </Button>
               <Grid container justify="flex-end">
                 <Grid item>
                   <Link href="#" variant="body2">
                     Already have an account? Sign in
-              </Link>
+                   </Link>
                 </Grid>
               </Grid>
             </FormStyled>
