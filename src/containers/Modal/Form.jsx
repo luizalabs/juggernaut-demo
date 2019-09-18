@@ -39,7 +39,7 @@ function Form({ open, handleClose }) {
 }
 
 Form.propTypes = {
-  open: PropTypes.string,
+  open: PropTypes.bool,
   handleClose: PropTypes.func
 }
 

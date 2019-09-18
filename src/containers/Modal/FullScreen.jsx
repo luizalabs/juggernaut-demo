@@ -52,7 +52,7 @@ function FullScreen({ open, handleClose }) {
 }
 
 FullScreen.propTypes = {
-  open: PropTypes.string,
+  open: PropTypes.bool,
   handleClose: PropTypes.func
 }
 
