@@ -8,8 +8,8 @@ import { ButtonsContainer } from './style'
 
 const FORM = 'FORM'
 const ALERT = 'ALERT'
-const MAX_WIDTH = 'MAXWIDTH'
-const FULL_SCREEN = 'FULL SCREEN'
+const MAX_WIDTH = 'MAX-WIDTH'
+const FULL_SCREEN = 'FULL-SCREEN'
 
 function Modal() {
   const [opened, setOpened] = React.useState('')
