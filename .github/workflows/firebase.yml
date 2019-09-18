@@ -1,0 +1,24 @@
+name: Node CI
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    name: Run Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout master branch
+      uses: actions/checkout@master
+    - name: Set-up Node.js 10.x
+      uses: actions/setup-node@master
+      with:
+        version: 10.x
+    - name: Install Firebase Tools
+      run: npm install -g firebase-tools
+    - name: Install NPM dependencies
+      run: npm install
+    - name: Build
+      run: npm run build --if-present
+    - name: Deploy
+      run: firebase deploy --token "${{ secrets.FIREBASE_TOKEN }}" -f
