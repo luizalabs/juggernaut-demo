@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import Button from '@material-ui/core/Button'
 import Dialog from '@material-ui/core/Dialog'
@@ -7,52 +7,40 @@ import DialogContent from '@material-ui/core/DialogContent'
 import DialogContentText from '@material-ui/core/DialogContentText'
 import DialogTitle from '@material-ui/core/DialogTitle'
 import TextField from '@material-ui/core/TextField'
-import { Container } from './style'
 
-const NAME = 'FORM MODAL'
-
-function Form({ open, openModal, handleClose }) {
+function Form({ open, handleClose }) {
   return (
-    <Container item xs={12} md={3}>
-      <Button variant="outlined" color="primary" onClick={openModal(NAME)}>
-        Open form modal
-          </Button>
-      <Dialog
-        open={open === NAME}
-        onClose={handleClose}
-      >
-        <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
-        <DialogContent>
-          <DialogContentText>
-            Modal Content - To subscribe to this website, please enter your email address here.
-            We will send updates occasionally.
-          </DialogContentText>
-          <TextField
-            autoFocus
-            fullWidth
-            id="name"
-            type="email"
-            margin="dense"
-            label="Email Address"
-          />
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose} color="primary">
-            Cancel
-          </Button>
-          <Button onClick={handleClose} color="primary">
-            Subscribe
-          </Button>
-        </DialogActions>
-      </Dialog>
-    </Container>
+    <Dialog open={open} onClose={handleClose}>
+      <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
+      <DialogContent>
+        <DialogContentText>
+          Modal Content - To subscribe to this website, please enter your email address here.
+          We will send updates occasionally.
+        </DialogContentText>
+        <TextField
+          autoFocus
+          fullWidth
+          id="name"
+          type="email"
+          margin="dense"
+          label="Email Address"
+        />
+      </DialogContent>
+      <DialogActions>
+        <Button onClick={handleClose} color="primary">
+          Cancel
+        </Button>
+        <Button onClick={handleClose} color="primary">
+          Subscribe
+        </Button>
+      </DialogActions>
+    </Dialog>
   )
 }
 
 Form.propTypes = {
   open: PropTypes.string,
-  handleClose: PropTypes.func,
-  openModal: PropTypes.func
+  handleClose: PropTypes.func
 }
 
-export default React.memo(Form)
+export default memo(Form)
