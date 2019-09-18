@@ -3,6 +3,7 @@ import { Grid, Typography, CardActions, Button, Container } from '@material-ui/c
 import signIn from 'assets/img/sign-in.png'
 import signInSide from 'assets/img/sign-in-side.png'
 import signUp from 'assets/img/sign-up.png'
+import modal from 'assets/img/modal.png'
 import logo from 'assets/img/juggernaut.gif'
 import Copyright from './Copyright'
 import { GridItemStyled, CardStyled, CardMediaStyled, CardContentStyled, ImgStyled, HomeStyled } from './style'
@@ -35,6 +36,13 @@ const layouts = [
     src: signUp,
     href: '/demo/sign-up-with-formik/',
     source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/SignUpWithFormik'
+  },
+  {
+    title: 'Modal',
+    description: 'Simple modal examples.',
+    src: modal,
+    href: '/demo/modal/',
+    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/Modal'
   }
 ]
 
