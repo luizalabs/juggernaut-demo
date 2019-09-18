@@ -1,6 +1,5 @@
 {
   "projects": {
-    "default": "juggernaut-demo",
-    "juggernaut-demo": "juggernaut-demo"
+    "default": "juggernaut-demo"
   }
 }
