@@ -6,12 +6,6 @@ const ButtonsContainer = styled(Grid)`
   width: 100vw;
 `
 
-const Container = styled(Grid)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
-
 const MaxWidthModalForm = styled.form`
   display: flex;
   margin: 0 auto;
@@ -20,6 +14,5 @@ const MaxWidthModalForm = styled.form`
 
 export {
   ButtonsContainer,
-  Container,
   MaxWidthModalForm
 }

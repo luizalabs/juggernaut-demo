@@ -74,7 +74,7 @@ function MaxWidth({ open, handleClose }) {
 }
 
 MaxWidth.propTypes = {
-  open: PropTypes.string,
+  open: PropTypes.bool,
   handleClose: PropTypes.func
 }
 

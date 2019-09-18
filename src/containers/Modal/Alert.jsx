@@ -41,7 +41,7 @@ function Alert({ open, handleClose }) {
 }
 
 Alert.propTypes = {
-  open: PropTypes.string,
+  open: PropTypes.bool,
   handleClose: PropTypes.func
 }
 
