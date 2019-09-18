@@ -63,13 +63,13 @@ function SignUpWithFormik() {
               <Grid container spacing={2}>
                 <Grid item xs={12} sm={6}>
                   <TextField
-                    autoComplete="fname"
                     name="firstName"
                     variant="outlined"
                     required
                     fullWidth
                     id="firstName"
                     label="First Name"
+                    autoComplete="fname"
                     autoFocus
                     onChange={handleChange}
                     onBlur={handleBlur}
