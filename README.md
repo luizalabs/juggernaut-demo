@@ -1,6 +1,6 @@
 # Juggernaut demo
 
-## Pages available
+## Examples available
 
 - Modal
 - Sign page
