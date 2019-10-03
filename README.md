@@ -1,6 +1,6 @@
 # Juggernaut demo
 
-## Startup
+## Get started
 
 Step by step to get this up and running
 
