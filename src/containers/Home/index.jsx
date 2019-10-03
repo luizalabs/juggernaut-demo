@@ -40,7 +40,7 @@ const layouts = [
   },
   {
     title: 'Toolbar',
-    description: 'A simple Toolbar exmaple.',
+    description: 'A simple Toolbar example.',
     src: toolbar,
     href: '/demo/toolbar/',
     source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/Toolbar'
