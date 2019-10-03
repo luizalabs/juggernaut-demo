@@ -1,3 +1,3 @@
 # Juggernaut demo
 
-Dedicated repo to Juggernaut components and utilities samples.
+Repository dedicated to examples of Juggernaut components and utilities.
