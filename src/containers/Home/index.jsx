@@ -4,6 +4,7 @@ import signIn from 'assets/img/sign-in.png'
 import signInSide from 'assets/img/sign-in-side.png'
 import signUp from 'assets/img/sign-up.png'
 import modal from 'assets/img/modal.png'
+import menu from 'assets/img/menu.png'
 import logo from 'assets/img/juggernaut.gif'
 import Copyright from './Copyright'
 import { GridItemStyled, CardStyled, CardMediaStyled, CardContentStyled, ImgStyled, HomeStyled } from './style'
@@ -36,6 +37,13 @@ const layouts = [
     src: modal,
     href: '/demo/modal/',
     source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/Modal'
+  },
+  {
+    title: 'Menu',
+    description: 'A simple menu example.',
+    src: menu,
+    href: '/demo/menu/',
+    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/Menu'
   }
 ]
 
