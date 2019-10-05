@@ -4,6 +4,7 @@ import signIn from 'assets/img/sign-in.png'
 import signInSide from 'assets/img/sign-in-side.png'
 import signUp from 'assets/img/sign-up.png'
 import modal from 'assets/img/modal.png'
+import tabs from 'assets/img/tabs.png'
 import logo from 'assets/img/juggernaut.gif'
 import Copyright from './Copyright'
 import { GridItemStyled, CardStyled, CardMediaStyled, CardContentStyled, ImgStyled, HomeStyled } from './style'
@@ -36,6 +37,13 @@ const layouts = [
     src: modal,
     href: '/demo/modal/',
     source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/Modal'
+  },
+  {
+    title: 'Tabs',
+    description: 'Simple tabs example.',
+    src: tabs,
+    href: '/demo/tabs/',
+    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/Tabs'
   }
 ]
 
