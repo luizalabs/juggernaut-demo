@@ -7,7 +7,7 @@ const CardStyled = styled(Card)`
 `
 
 const CardMediaStyled = styled(CardMedia)`
-  height: 140px
+  height: 140px;
 `
 
 export {
