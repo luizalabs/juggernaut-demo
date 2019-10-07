@@ -8,9 +8,9 @@ const ContainerStyled = styled(Container)`
 `
 
 const PaperStyled = styled(Paper)`
-  width: '100%';
+  width: 100%;
   margin-top: ${({ theme }) => theme.spacing(3)}px;
-  overflow-x: 'auto';
+  overflow-x: auto;
 `
 
 const TableStyled = styled(Table)`
