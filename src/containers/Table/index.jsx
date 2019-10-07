@@ -19,7 +19,7 @@ const rows = [
   createData('Capitain Marvel', 7.5, 8.5, 8.2, 2.5),
 ]
 
-const SimpleTable = () => {
+function SimpleTable() {
   return (
     <ContainerStyled component="main" maxWidth="lg">
       <PaperStyled>
