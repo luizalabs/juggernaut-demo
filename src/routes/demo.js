@@ -3,6 +3,7 @@ import { lazy } from 'react'
 const SignIn = lazy(() => import('containers/SignIn'))
 const SignInSide = lazy(() => import('containers/SignInSide'))
 const SignUp = lazy(() => import('containers/SignUp'))
+const Card = lazy(() => import('containers/Card'))
 
 const demo = [
   {
@@ -18,6 +19,11 @@ const demo = [
   {
     path: '/demo/sign-up',
     main: SignUp,
+    exact: true
+  },
+  {
+    path: '/demo/card',
+    main: Card,
     exact: true
   }
 ]

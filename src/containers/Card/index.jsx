@@ -8,8 +8,7 @@ import Typography from '@material-ui/core/Typography'
 import dogs from 'assets/img/two-dogs.jpg'
 import { CardStyled, CardMediaStyled } from './style'
 
-const CardExample = () => {
-
+function Card () {
   return (
     <Container component="main" maxWidth="xs">
       <CardStyled>
@@ -40,4 +39,4 @@ const CardExample = () => {
   );
 }
 
-export default CardExample
+export default Card
