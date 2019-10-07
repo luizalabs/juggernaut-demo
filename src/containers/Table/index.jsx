@@ -1,13 +1,12 @@
-import React from 'react';
+import React from 'react'
 import TableBody from '@material-ui/core/TableBody'
 import TableCell from '@material-ui/core/TableCell'
 import TableHead from '@material-ui/core/TableHead'
 import TableRow from '@material-ui/core/TableRow'
-
 import { ContainerStyled, PaperStyled, TableStyled } from './style'
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
+const createData = (name, calories, fat, carbs, protein) => {
+  return { name, calories, fat, carbs, protein }
 }
 
 const rows = [
@@ -18,7 +17,7 @@ const rows = [
   createData('Thanos (sem manopla)', 4.0, 9.5, 9.2, 8.5),
   createData('Goku', 8000, 8000, 8000, 8000),
   createData('Capitain Marvel', 7.5, 8.5, 8.2, 2.5),
-];
+]
 
 const SimpleTable = () => {
   return (
@@ -50,7 +49,7 @@ const SimpleTable = () => {
         </TableStyled>
       </PaperStyled>
     </ContainerStyled>
-  );
+  )
 }
 
 export default SimpleTable
