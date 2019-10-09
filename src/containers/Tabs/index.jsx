@@ -3,7 +3,7 @@ import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import { PaperStyled } from './style'
 
-const Tabs = () => {
+function Tabs() {
   const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
