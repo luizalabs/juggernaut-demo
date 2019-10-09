@@ -18,6 +18,11 @@ const demo = [
     exact: true
   },
   {
+    path: '/demo/sign-up',
+    main: SignUp,
+    exact: true
+  },
+  {
     path: '/demo/toolbar',
     main: Toolbar,
     exact: true
