@@ -5,7 +5,7 @@ import MenuItem from '@material-ui/core/MenuItem'
 import { ContainerStyled } from './style'
 
 function SimpleMenu() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClick = event => {
     setAnchorEl(event.currentTarget)
