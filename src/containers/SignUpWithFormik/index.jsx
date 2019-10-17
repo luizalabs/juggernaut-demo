@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Formik } from 'formik'
+import { Formik, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 import Button from '@material-ui/core/Button'
 import CssBaseline from '@material-ui/core/CssBaseline'
@@ -10,11 +10,17 @@ import Link from '@material-ui/core/Link'
 import Grid from '@material-ui/core/Grid'
 import Box from '@material-ui/core/Box'
 import InputLabel from '@material-ui/core/InputLabel'
-import Select from '@material-ui/core/Select'
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined'
 import Typography from '@material-ui/core/Typography'
 import Container from '@material-ui/core/Container'
-import { FormContainerStyled, FormStyled, FormControlStyled, AvatarStyled, ErrorStyled } from './style'
+import Select from '@material-ui/core/Select'
+import {
+  FormContainerStyled,
+  FormStyled,
+  FormControlStyled,
+  AvatarStyled,
+  ErrorStyled
+} from './style'
 
 const validationSchema = Yup.object().shape({
   firstName: Yup.string()
@@ -64,9 +70,7 @@ function SignUpWithFormik() {
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
-          onSubmit={values => {
-            console.log(values)
-          }}
+          onSubmit={console.log}
           render={({ handleSubmit, handleChange, handleBlur, errors, touched }) => (
             <FormStyled onSubmit={handleSubmit}>
               <Grid container spacing={2}>
@@ -83,7 +87,7 @@ function SignUpWithFormik() {
                     onChange={handleChange}
                     onBlur={handleBlur}
                   />
-                  {errors.firstName && touched.firstName ? (<ErrorStyled>{errors.firstName}</ErrorStyled>) : null}
+                  <ErrorMessage component={ErrorStyled} name="firstName" />
                 </Grid>
                 <Grid item md={6} sm={6} xs={12}>
                   <TextField
@@ -97,7 +101,7 @@ function SignUpWithFormik() {
                     onChange={handleChange}
                     onBlur={handleBlur}
                   />
-                  {errors.lastName && touched.lastName ? (<ErrorStyled>{errors.lastName}</ErrorStyled>) : null}
+                  <ErrorMessage component={ErrorStyled} name="lastName" />
                 </Grid>
                 <Grid item md={12} sm={12} xs={12}>
                   <FormControlStyled variant="outlined" fullWidth>
@@ -115,11 +119,11 @@ function SignUpWithFormik() {
                       }}
                     >
                       <option value="" />
-                      <option value={10}>Ten</option>
-                      <option value={20}>Twenty</option>
-                      <option value={30}>Thirty</option>
+                      <option value="10">Ten</option>
+                      <option value="20">Twenty</option>
+                      <option value="30">Thirty</option>
                     </Select>
-                    {errors.age && touched.age ? (<ErrorStyled>{errors.age}</ErrorStyled>) : null}
+                    <ErrorMessage component={ErrorStyled} name="age" />
                   </FormControlStyled>
                 </Grid>
                 <Grid item md={12} sm={12} xs={12}>
@@ -134,7 +138,7 @@ function SignUpWithFormik() {
                     onChange={handleChange}
                     onBlur={handleBlur}
                   />
-                  {errors.email && touched.email ? (<ErrorStyled>{errors.email}</ErrorStyled>) : null}
+                  <ErrorMessage component={ErrorStyled} name="email" />
                 </Grid>
                 <Grid item md={12} sm={12} xs={12}>
                   <TextField
@@ -149,7 +153,7 @@ function SignUpWithFormik() {
                     onChange={handleChange}
                     onBlur={handleBlur}
                   />
-                  {errors.password && touched.password ? (<ErrorStyled>{errors.password}</ErrorStyled>) : null}
+                  <ErrorMessage component={ErrorStyled} name="password" />
                 </Grid>
                 <Grid item md={12} sm={12} xs={12}>
                   <FormControlLabel
