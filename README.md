@@ -1,5 +1,7 @@
 # Juggernaut demo
 
+## Repository dedicated to examples of Juggernaut components and utilities.
+
 ## Get started
 
 Step by step to get this up and running
