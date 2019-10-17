@@ -28,6 +28,7 @@ const FormControlStyled = styled(FormControl)`
   margin-top: ${({ theme }) => theme.spacing(1)}px;
   min-width: 120px;
 `
+
 export {
   AvatarStyled,
   FormControlStyled,
