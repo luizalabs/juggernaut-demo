@@ -19,20 +19,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --maxWorkers=3",
-    "test:coverage": "react-scripts test --watchAll=false --coverage --no-cache --logHeapUsage --silent --maxWorkers=2",
-    "eslint": "eslint --ext .jsx,.js src"
+    "build": "react-scripts build"
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "devDependencies": {
-    "@softboxlab/eslint-config-gandalf-lint": "^1.0.0",
-    "eslint": "5.16.0",
-    "eslint-plugin-react": "^7.12.4"
-  }
+  ]
 }
