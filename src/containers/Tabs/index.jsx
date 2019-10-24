@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
+import MaterialTabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
-import { PaperStyled, TabsStyled } from './style'
+import { PaperStyled } from './style'
 
 function Tabs() {
   const [value, setValue] = useState(0);
@@ -11,7 +12,7 @@ function Tabs() {
 
   return (
     <PaperStyled>
-      <TabsStyled
+      <MaterialTabs
         value={value}
         onChange={handleChange}
         indicatorColor="primary"
@@ -21,7 +22,7 @@ function Tabs() {
         <Tab label="Item One" />
         <Tab label="Item Two" disabled />
         <Tab label="Item Three" />
-      </TabsStyled>
+      </MaterialTabs>
     </PaperStyled>
   );
 }
