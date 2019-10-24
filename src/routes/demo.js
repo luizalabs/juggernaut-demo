@@ -3,6 +3,8 @@ import { lazy } from 'react'
 const SignIn = lazy(() => import('containers/SignIn'))
 const SignInSide = lazy(() => import('containers/SignInSide'))
 const SignUp = lazy(() => import('containers/SignUp'))
+const Modal = lazy(() => import('containers/Modal'))
+const Toolbar = lazy(() => import('containers/Toolbar'))
 
 const demo = [
   {
@@ -18,6 +20,16 @@ const demo = [
   {
     path: '/demo/sign-up',
     main: SignUp,
+    exact: true
+  },
+  {
+    path: '/demo/toolbar',
+    main: Toolbar,
+    exact: true
+  },
+  {
+    path: '/demo/modal',
+    main: Modal,
     exact: true
   }
 ]
