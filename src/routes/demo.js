@@ -4,6 +4,8 @@ const SignIn = lazy(() => import('containers/SignIn'))
 const SignInSide = lazy(() => import('containers/SignInSide'))
 const SignUp = lazy(() => import('containers/SignUp'))
 const SignUpWithFormik = lazy(() => import('containers/SignUpWithFormik'))
+const Toolbar = lazy(() => import('containers/Toolbar'))
+const Modal = lazy(() => import('containers/Modal'))
 
 const demo = [
   {
@@ -24,6 +26,16 @@ const demo = [
   {
     path: '/demo/sign-up-with-formik',
     main: SignUpWithFormik,
+    exact: true
+  },
+  {
+    path: '/demo/toolbar',
+    main: Toolbar,
+    exact: true
+  },
+  {
+    path: '/demo/modal',
+    main: Modal,
     exact: true
   }
 ]
