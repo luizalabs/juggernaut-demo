@@ -9,6 +9,7 @@ import Checkbox from '@material-ui/core/Checkbox'
 import Link from '@material-ui/core/Link'
 import Grid from '@material-ui/core/Grid'
 import Box from '@material-ui/core/Box'
+import OutlinedInput from '@material-ui/core/OutlinedInput'
 import InputLabel from '@material-ui/core/InputLabel'
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined'
 import Typography from '@material-ui/core/Typography'
@@ -51,11 +52,12 @@ const initialValues = {
 }
 
 function SignUpWithFormik() {
-  const inputLabel = useRef(null);
-  const [labelWidth, setLabelWidth] = useState(0);
+  const inputLabel = useRef(null)
+  const [labelWidth, setLabelWidth] = useState(0)
+
   useEffect(() => {
-    setLabelWidth(inputLabel.current.offsetWidth);
-  }, []);
+    setLabelWidth(inputLabel.current.offsetWidth)
+  }, [])
 
   return (
     <Container component="main" maxWidth="xs">
@@ -71,7 +73,7 @@ function SignUpWithFormik() {
           initialValues={initialValues}
           validationSchema={validationSchema}
           onSubmit={console.log}
-          render={({ handleSubmit, handleChange, handleBlur, errors, touched }) => (
+          render={({ handleSubmit, handleChange, handleBlur }) => (
             <FormStyled onSubmit={handleSubmit}>
               <Grid container spacing={2}>
                 <Grid item md={6} sm={6} xs={12}>
@@ -104,27 +106,23 @@ function SignUpWithFormik() {
                   <ErrorMessage component={ErrorStyled} name="lastName" />
                 </Grid>
                 <Grid item md={12} sm={12} xs={12}>
-                  <FormControlStyled variant="outlined" fullWidth>
+                  <FormControlStyled variant="outlined" fullWidth required>
                     <InputLabel ref={inputLabel} htmlFor="outlined-age-native-simple">
                       Age
                     </InputLabel>
                     <Select
                       native
-                      onChange={handleChange('age')}
+                      onChange={handleChange}
                       onBlur={handleBlur}
-                      labelWidth={labelWidth}
-                      inputProps={{
-                        name: 'age',
-                        id: 'outlined-age-native-simple',
-                      }}
+                      input={<OutlinedInput labelWidth={labelWidth} name="age" id="outlined-age-simple" />}
                     >
                       <option value="" />
                       <option value="10">Ten</option>
                       <option value="20">Twenty</option>
                       <option value="30">Thirty</option>
                     </Select>
-                    <ErrorMessage component={ErrorStyled} name="age" />
                   </FormControlStyled>
+                  <ErrorMessage component={ErrorStyled} name="age" />
                 </Grid>
                 <Grid item md={12} sm={12} xs={12}>
                   <TextField
