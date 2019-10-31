@@ -6,6 +6,7 @@ const SignUp = lazy(() => import('containers/SignUp'))
 const Card = lazy(() => import('containers/Card'))
 const Modal = lazy(() => import('containers/Modal'))
 const Toolbar = lazy(() => import('containers/Toolbar'))
+const List = lazy(() => import('containers/List'))
 
 const demo = [
   {
@@ -36,6 +37,11 @@ const demo = [
   {
     path: '/demo/modal',
     main: Modal,
+    exact: true
+  },
+  {
+    path: '/demo/list',
+    main: List,
     exact: true
   }
 ]
