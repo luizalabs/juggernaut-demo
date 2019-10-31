@@ -7,7 +7,6 @@ const SignUpWithFormik = lazy(() => import('containers/SignUpWithFormik'))
 const Card = lazy(() => import('containers/Card'))
 const Toolbar = lazy(() => import('containers/Toolbar'))
 const Modal = lazy(() => import('containers/Modal'))
-const Modal = lazy(() => import('containers/Modal'))
 
 const demo = [
   {
