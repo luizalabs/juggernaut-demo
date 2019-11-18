@@ -5,6 +5,7 @@ import signInSide from 'assets/img/sign-in-side.png'
 import signUp from 'assets/img/sign-up.png'
 import modal from 'assets/img/modal.png'
 import menu from 'assets/img/menu.png'
+import table from 'assets/img/table.png'
 import card from 'assets/img/card.png'
 import toolbar from 'assets/img/toolbar.png'
 import logo from 'assets/img/juggernaut.gif'
@@ -46,6 +47,13 @@ const layouts = [
     src: menu,
     href: '/demo/menu/',
     source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/Menu'
+  },
+  {
+    title: 'Table',
+    description: 'A simple Table example.',
+    src: table,
+    href: '/demo/table/',
+    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/Table'
   },
   {
     title: 'Card',
