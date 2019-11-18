@@ -4,9 +4,14 @@ import signIn from 'assets/img/sign-in.png'
 import signInSide from 'assets/img/sign-in-side.png'
 import signUp from 'assets/img/sign-up.png'
 import modal from 'assets/img/modal.png'
+<<<<<<< HEAD
 import table from 'assets/img/table.png'
 import card from 'assets/img/card.png'
 import tabs from 'assets/img/tabs.png'
+=======
+import tabs from 'assets/img/tabs.png'
+import card from 'assets/img/card.png'
+>>>>>>> 0aff1f16abf0abce4004d9838c992e6d52f0afa7
 import toolbar from 'assets/img/toolbar.png'
 import logo from 'assets/img/juggernaut.gif'
 import Copyright from './Copyright'

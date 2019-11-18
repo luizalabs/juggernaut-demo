@@ -4,7 +4,10 @@ const SignIn = lazy(() => import('containers/SignIn'))
 const SignInSide = lazy(() => import('containers/SignInSide'))
 const SignUp = lazy(() => import('containers/SignUp'))
 const Tabs = lazy(() => import('containers/Tabs'))
+<<<<<<< HEAD
 const Table = lazy(() => import('containers/Table'))
+=======
+>>>>>>> 0aff1f16abf0abce4004d9838c992e6d52f0afa7
 const Card = lazy(() => import('containers/Card'))
 const Modal = lazy(() => import('containers/Modal'))
 const Toolbar = lazy(() => import('containers/Toolbar'))
