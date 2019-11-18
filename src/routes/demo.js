@@ -4,6 +4,7 @@ const SignIn = lazy(() => import('containers/SignIn'))
 const SignInSide = lazy(() => import('containers/SignInSide'))
 const SignUp = lazy(() => import('containers/SignUp'))
 const Menu = lazy(() => import('containers/Menu'))
+const Table = lazy(() => import('containers/Table'))
 const Card = lazy(() => import('containers/Card'))
 const Modal = lazy(() => import('containers/Modal'))
 const Toolbar = lazy(() => import('containers/Toolbar'))
@@ -27,6 +28,11 @@ const demo = [
   {
     path: '/demo/menu',
     main: Menu,
+    exact: true
+  },
+  {
+    path: '/demo/table',
+    main: Table,
     exact: true
   },
   {
