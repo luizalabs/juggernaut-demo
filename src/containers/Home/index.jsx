@@ -7,6 +7,7 @@ import modal from 'assets/img/modal.png'
 import menu from 'assets/img/menu.png'
 import table from 'assets/img/table.png'
 import card from 'assets/img/card.png'
+import tabs from 'assets/img/tabs.png'
 import toolbar from 'assets/img/toolbar.png'
 import logo from 'assets/img/juggernaut.gif'
 import Copyright from './Copyright'
@@ -47,6 +48,13 @@ const layouts = [
     src: modal,
     href: '/demo/modal/',
     source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/Modal'
+  },
+  {
+    title: 'Tabs',
+    description: 'Simple tabs example.',
+    src: tabs,
+    href: '/demo/tabs/',
+    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/Tabs'
   },
   {
     title: 'Menu',
