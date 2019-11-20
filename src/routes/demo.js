@@ -31,6 +31,7 @@ const demo = [
     main: SignUpWithFormik,
     exact: true
   },
+  {
     path: '/demo/menu',
     main: Menu,
     exact: true
