@@ -2,8 +2,8 @@ import React, { useState, Fragment } from 'react'
 import { Box, Tabs as TabsComponent, Tab, Typography } from '@material-ui/core'
 import { PaperStyled } from './style'
 
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
+function TabPanel (props) {
+  const { children, value, index, ...other } = props
 
   return (
     <Typography
@@ -19,11 +19,11 @@ function TabPanel(props) {
   );
 }
 
-function Tabs() {
-  const [value, setValue] = useState(0);
+function Tabs () {
+  const [value, setValue] = useState(0)
 
   const handleChange = (event, newValue) => {
-    setValue(newValue);
+    setValue(newValue)
   }
 
   return (
