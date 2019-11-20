@@ -36,6 +36,13 @@ const layouts = [
     source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/SignUp'
   },
   {
+    title: 'Sign Up With Formik',
+    description: 'A simple Sign Up page with Formik.',
+    src: signUp,
+    href: '/demo/sign-up-with-formik/',
+    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/SignUpWithFormik'
+  },
+  {
     title: 'Modal',
     description: 'Simple modal examples.',
     src: modal,
