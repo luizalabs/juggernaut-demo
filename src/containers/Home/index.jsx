@@ -4,6 +4,7 @@ import signIn from 'assets/img/sign-in.png'
 import signInSide from 'assets/img/sign-in-side.png'
 import signUp from 'assets/img/sign-up.png'
 import modal from 'assets/img/modal.png'
+import menu from 'assets/img/menu.png'
 import table from 'assets/img/table.png'
 import card from 'assets/img/card.png'
 import tabs from 'assets/img/tabs.png'
@@ -47,6 +48,13 @@ const layouts = [
     src: tabs,
     href: '/demo/tabs/',
     source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/Tabs'
+  },
+  {
+    title: 'Menu',
+    description: 'A simple menu example.',
+    src: menu,
+    href: '/demo/menu/',
+    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/Menu'
   },
   {
     title: 'Table',
