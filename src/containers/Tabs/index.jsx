@@ -16,7 +16,7 @@ function TabPanel (props) {
     >
       <Box p={3}>{children}</Box>
     </Typography>
-  );
+  )
 }
 
 function Tabs () {
@@ -51,7 +51,7 @@ function Tabs () {
         Item Three
       </TabPanel>
     </Fragment>
-  );
+  )
 }
 
 export default Tabs

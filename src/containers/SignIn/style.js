@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Avatar from '@material-ui/core/Avatar';
+import Avatar from '@material-ui/core/Avatar'
 
 const FormContainerStyled = styled.div`
   margin-top: ${({ theme }) => theme.spacing(8)}px;

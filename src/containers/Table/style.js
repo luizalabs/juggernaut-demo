@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Container from '@material-ui/core/Container';
+import Container from '@material-ui/core/Container'
 import Paper from '@material-ui/core/Paper'
 import Table from '@material-ui/core/Table'
 
