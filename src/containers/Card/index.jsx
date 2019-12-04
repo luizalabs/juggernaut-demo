@@ -36,7 +36,7 @@ function Card () {
         </CardActions>
       </CardStyled>
     </Container>
-  );
+  )
 }
 
 export default Card
