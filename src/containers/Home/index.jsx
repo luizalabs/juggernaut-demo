@@ -9,6 +9,7 @@ import table from 'assets/img/table.png'
 import card from 'assets/img/card.png'
 import tabs from 'assets/img/tabs.png'
 import toolbar from 'assets/img/toolbar.png'
+import list from 'assets/img/list.png'
 import logo from 'assets/img/juggernaut.gif'
 import Copyright from './Copyright'
 import { GridItemStyled, CardStyled, CardMediaStyled, CardContentStyled, ImgStyled, HomeStyled } from './style'
@@ -83,6 +84,13 @@ const layouts = [
     src: toolbar,
     href: '/demo/toolbar/',
     source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/Toolbar'
+  },
+  {
+    title: 'List',
+    description: 'A simple list of items example.',
+    src: list,
+    href: '/demo/list/',
+    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/List'
   }
 ]
 
