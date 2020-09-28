@@ -24,7 +24,13 @@ yarn start
 
 ## Examples available
 
+- Sign In
+- Sign-in side
+- Sign Up
+- Sign Up With Formik
 - Modal
-- Sign page
-- Sign page - Side
-- SignUp page
+- Tabs
+- Menu
+- Table
+- Card
+- Toolbar
