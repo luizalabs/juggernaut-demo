@@ -114,7 +114,7 @@ function Home() {
                   <Typography component="p">{layout.description}</Typography>
                 </CardContentStyled>
                 <CardActions>
-                  <Button component="a" href={layout.source} size="small" color="primary">
+                  <Button component="a" target="_blank" href={layout.source} size="small" color="primary">
                     Source code
                   </Button>
                 </CardActions>
