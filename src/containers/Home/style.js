@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Card, CardContent, Grid, CardMedia, Typography } from '@material-ui/core'
-import { ReactComponent as HearthIcon } from 'assets/svg/like.svg'
+import { ReactComponent as HearthIcon } from 'assets/images/like.svg'
 
 const GridItemStyled = styled(Grid)`
   flex-grow: 1;
@@ -40,6 +40,7 @@ const TypographyStyled = styled(Typography)`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: ${({ theme }) => theme.spacing(3)}px;
 `
 
 const IconStyled = styled(HearthIcon)`
