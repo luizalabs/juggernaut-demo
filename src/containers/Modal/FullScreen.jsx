@@ -9,21 +9,15 @@ import IconButton from '@material-ui/core/IconButton'
 import ListItemText from '@material-ui/core/ListItemText'
 import ListItem from '@material-ui/core/ListItem'
 import List from '@material-ui/core/List'
-import Slide from '@material-ui/core/Slide'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 
-const Transition = React.forwardRef((props, ref) => (
-  <Slide direction="up" ref={ref} {...props} />
-))
-
-function FullScreen({ open, handleClose }) {
+function FullScreen ({ open, handleClose }) {
   return (
     <Dialog
       fullScreen
       open={open}
       onClose={handleClose}
-      TransitionComponent={Transition}
     >
       <AppBar style={{ position: 'relative' }}>
         <Toolbar>
@@ -51,9 +45,13 @@ function FullScreen({ open, handleClose }) {
   )
 }
 
+FullScreen.defaultProps = {
+  open: false
+}
+
 FullScreen.propTypes = {
   open: PropTypes.bool,
-  handleClose: PropTypes.func
+  handleClose: PropTypes.func.isRequired
 }
 
 export default memo(FullScreen)

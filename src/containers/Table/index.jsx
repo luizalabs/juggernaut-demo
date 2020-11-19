@@ -5,9 +5,7 @@ import TableHead from '@material-ui/core/TableHead'
 import TableRow from '@material-ui/core/TableRow'
 import { ContainerStyled, PaperStyled, TableStyled } from './style'
 
-const createData = (name, calories, fat, carbs, protein) => {
-  return { name, calories, fat, carbs, protein }
-}
+const createData = (name, calories, fat, carbs, protein) => ({ name, calories, fat, carbs, protein })
 
 const rows = [
   createData('Iron Man', 5.5, 8.5, 4.5, 10.0),
@@ -16,10 +14,10 @@ const rows = [
   createData('Hulk', 7.0, 9.9, 9.9, 1.5),
   createData('Thanos (sem manopla)', 4.0, 9.5, 9.2, 8.5),
   createData('Goku', 8000, 8000, 8000, 8000),
-  createData('Captain Marvel', 7.5, 8.5, 8.2, 2.5),
+  createData('Captain Marvel', 7.5, 8.5, 8.2, 2.5)
 ]
 
-function SimpleTable() {
+function SimpleTable () {
   return (
     <ContainerStyled component="main" maxWidth="lg">
       <PaperStyled>

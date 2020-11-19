@@ -12,7 +12,7 @@ import Typography from '@material-ui/core/Typography'
 import Container from '@material-ui/core/Container'
 import { FormContainerStyled, FormStyled, AvatarStyled } from './style'
 
-function SignUp() {
+function SignUp () {
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -35,7 +35,7 @@ function SignUp() {
                 label="First Name"
                 autoComplete="fname"
                 autoFocus
-                />
+              />
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField

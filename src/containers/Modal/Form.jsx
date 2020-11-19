@@ -8,7 +8,7 @@ import DialogContentText from '@material-ui/core/DialogContentText'
 import DialogTitle from '@material-ui/core/DialogTitle'
 import TextField from '@material-ui/core/TextField'
 
-function Form({ open, handleClose }) {
+function Form ({ open, handleClose }) {
   return (
     <Dialog open={open} onClose={handleClose}>
       <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
@@ -38,9 +38,13 @@ function Form({ open, handleClose }) {
   )
 }
 
+Form.defaultProps = {
+  open: false
+}
+
 Form.propTypes = {
   open: PropTypes.bool,
-  handleClose: PropTypes.func
+  handleClose: PropTypes.func.isRequired
 }
 
 export default memo(Form)

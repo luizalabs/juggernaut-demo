@@ -25,6 +25,7 @@
     "test": "react-scripts test --maxWorkers=3",
     "test:coverage": "react-scripts test --watchAll=false --coverage --no-cache --logHeapUsage --silent --maxWorkers=2",
     "lint": "eslint --ext .jsx,.js src",
+    "lint:fix": "npm run linst -- --fix",
     "docs:dev": "docz dev",
     "docs:build": "docz build"
   },

@@ -51,7 +51,7 @@ const initialValues = {
   allowExtraEmails: false
 }
 
-function SignUpWithFormik() {
+function SignUpWithFormik () {
   const inputLabel = useRef(null)
   const [labelWidth, setLabelWidth] = useState(0)
 
@@ -179,7 +179,7 @@ function SignUpWithFormik() {
                 <Grid item>
                   <Link href="#" variant="body2">
                     Already have an account? Sign in
-                   </Link>
+                  </Link>
                 </Grid>
               </Grid>
             </FormStyled>
