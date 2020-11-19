@@ -5,7 +5,7 @@ import CardContent from '@material-ui/core/CardContent'
 import Container from '@material-ui/core/Container'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
-import dogs from 'assets/img/two-dogs.jpg'
+import dogs from 'assets/images/two-dogs.jpg'
 import { CardStyled, CardMediaStyled } from './style'
 
 function Card () {
