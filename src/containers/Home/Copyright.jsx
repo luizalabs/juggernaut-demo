@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from '@material-ui/core'
 import { TypographyStyled, IconStyled } from './style'
 
-function Copyright() {
+function Copyright () {
   return (
     <TypographyStyled variant="body2" color="textSecondary" align="center" className="my-3">
       <Link color="inherit" href="https://softbox.com.br/">
@@ -14,7 +14,7 @@ function Copyright() {
         by Juggernaut.
       </Link>
     </TypographyStyled>
-  );
+  )
 }
 
 export default Copyright

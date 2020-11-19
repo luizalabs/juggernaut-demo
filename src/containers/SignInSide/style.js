@@ -1,13 +1,13 @@
-import styled from 'styled-components';
-import Grid from '@material-ui/core/Grid';
-import Avatar from '@material-ui/core/Avatar';
+import styled from 'styled-components'
+import Grid from '@material-ui/core/Grid'
+import Avatar from '@material-ui/core/Avatar'
 
 const ContainerStyled = styled(Grid)`
   height: 100vh;
 `
 
 const SideImageStyld = styled(Grid)`
-  background-image: url(https://source.unsplash.com/rand-om);
+  background-image: url(https://source.unsplash.com/random);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

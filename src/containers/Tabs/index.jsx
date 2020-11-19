@@ -1,4 +1,5 @@
 import React, { useState, Fragment } from 'react'
+import PropTypes from 'prop-types'
 import { Box, Tabs as TabsComponent, Tab, Typography } from '@material-ui/core'
 import { PaperStyled } from './style'
 
@@ -17,6 +18,16 @@ function TabPanel (props) {
       <Box p={3}>{children}</Box>
     </Typography>
   )
+}
+
+TabPanel.defaultProps = {
+  value: 0
+}
+
+TabPanel.propTypes = {
+  children: PropTypes.node.isRequired,
+  value: PropTypes.number,
+  index: PropTypes.number.isRequired
 }
 
 function Tabs () {

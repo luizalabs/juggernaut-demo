@@ -39,4 +39,3 @@ const getSpacing = (name, prefix) => ({ theme }) => (
 export {
   getSpacing
 }
-

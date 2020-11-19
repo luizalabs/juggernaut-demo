@@ -6,19 +6,13 @@ import DialogActions from '@material-ui/core/DialogActions'
 import DialogContent from '@material-ui/core/DialogContent'
 import DialogContentText from '@material-ui/core/DialogContentText'
 import DialogTitle from '@material-ui/core/DialogTitle'
-import Slide from '@material-ui/core/Slide'
 
-const Transition = React.forwardRef((props, ref) => (
-  <Slide direction="up" ref={ref} {...props} />
-))
-
-function Alert({ open, handleClose }) {
+function Alert ({ open, handleClose }) {
   return (
     <Dialog
       keepMounted
       open={open}
       onClose={handleClose}
-      TransitionComponent={Transition}
     >
       <DialogTitle id="alert-dialog-title">Modal Title</DialogTitle>
       <DialogContent>
@@ -40,9 +34,13 @@ function Alert({ open, handleClose }) {
   )
 }
 
+Alert.defaultProps = {
+  open: false
+}
+
 Alert.propTypes = {
   open: PropTypes.bool,
-  handleClose: PropTypes.func
+  handleClose: PropTypes.func.isRequired
 }
 
 export default memo(Alert)

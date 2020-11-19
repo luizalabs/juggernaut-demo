@@ -10,7 +10,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined'
 import Typography from '@material-ui/core/Typography'
 import { ContainerStyled, SideImageStyld, FormStyled, AvatarStyled, SignInStyled } from './style'
 
-function SignInSide() {
+function SignInSide () {
   return (
     <ContainerStyled container component="main">
       <SideImageStyld item xs={false} sm={4} md={7} />
@@ -66,7 +66,7 @@ function SignInSide() {
               </Grid>
               <Grid item>
                 <Link href="#" variant="body2">
-                  Don't have an account? Sign Up
+                  Don`t have an account? Sign Up
                 </Link>
               </Grid>
             </Grid>

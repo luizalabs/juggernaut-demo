@@ -11,7 +11,7 @@ import TextField from '@material-ui/core/TextField'
 import Typography from '@material-ui/core/Typography'
 import { FormContainerStyled, FormStyled, AvatarStyled } from './style'
 
-function SignIn() {
+function SignIn () {
   return (
     <Container component="main" maxWidth="xs">
       <FormContainerStyled>

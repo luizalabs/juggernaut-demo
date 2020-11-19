@@ -94,7 +94,7 @@ const layouts = [
   }
 ]
 
-function Home() {
+function Home () {
   return (
     <HomeStyled>
       <Container component="main" fixed>
