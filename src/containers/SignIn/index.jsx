@@ -1,27 +1,21 @@
 import React from 'react'
-import Box from '@material-ui/core/Box'
-import Button from '@material-ui/core/Button'
-import Checkbox from '@material-ui/core/Checkbox'
-import Container from '@material-ui/core/Container'
-import FormControlLabel from '@material-ui/core/FormControlLabel'
-import Grid from '@material-ui/core/Grid'
-import Link from '@material-ui/core/Link'
+import { Box, Button, Checkbox, Container, FormControlLabel, Grid, Link, TextField, Typography } from '@material-ui/core'
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined'
-import TextField from '@material-ui/core/TextField'
-import Typography from '@material-ui/core/Typography'
-import { FormContainerStyled, FormStyled, AvatarStyled } from './style'
+import Form from 'components/Form'
+import Avatar from 'components/Avatar'
+import FormContainer from 'components/Form/Container'
 
 function SignIn () {
   return (
     <Container component="main" maxWidth="xs">
-      <FormContainerStyled>
-        <AvatarStyled>
+      <FormContainer>
+        <Avatar>
           <LockOutlinedIcon />
-        </AvatarStyled>
+        </Avatar>
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
-        <FormStyled noValidate>
+        <Form noValidate>
           <TextField
             variant="outlined"
             margin="normal"
@@ -69,8 +63,8 @@ function SignIn () {
               </Link>
             </Grid>
           </Grid>
-        </FormStyled>
-      </FormContainerStyled>
+        </Form>
+      </FormContainer>
       <Box mt={8}>
         <Typography variant="body2" color="textSecondary" align="center">
           {'Juggernaut Demo - '}

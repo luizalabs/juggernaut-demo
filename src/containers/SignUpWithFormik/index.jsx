@@ -1,27 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Formik, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
-import Button from '@material-ui/core/Button'
-import CssBaseline from '@material-ui/core/CssBaseline'
-import TextField from '@material-ui/core/TextField'
-import FormControlLabel from '@material-ui/core/FormControlLabel'
-import Checkbox from '@material-ui/core/Checkbox'
-import Link from '@material-ui/core/Link'
-import Grid from '@material-ui/core/Grid'
-import Box from '@material-ui/core/Box'
-import OutlinedInput from '@material-ui/core/OutlinedInput'
-import InputLabel from '@material-ui/core/InputLabel'
+import { Button, CssBaseline, TextField, FormControlLabel, Checkbox, Link, Grid, Box, OutlinedInput, InputLabel, Typography, Container, Select } from '@material-ui/core'
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined'
-import Typography from '@material-ui/core/Typography'
-import Container from '@material-ui/core/Container'
-import Select from '@material-ui/core/Select'
-import {
-  FormContainerStyled,
-  FormStyled,
-  FormControlStyled,
-  AvatarStyled,
-  ErrorStyled
-} from './style'
+import Form from 'components/Form'
+import Avatar from 'components/Avatar'
+import FormContainer from 'components/Form/Container'
+import { FormControl, Error } from './style'
 
 const validationSchema = Yup.object().shape({
   firstName: Yup.string()
@@ -62,10 +47,10 @@ function SignUpWithFormik () {
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
-      <FormContainerStyled>
-        <AvatarStyled>
+      <FormContainer>
+        <Avatar>
           <LockOutlinedIcon />
-        </AvatarStyled>
+        </Avatar>
         <Typography component="h1" variant="h5">
           Sign up
         </Typography>
@@ -74,7 +59,7 @@ function SignUpWithFormik () {
           validationSchema={validationSchema}
           onSubmit={console.log}
           render={({ handleSubmit, handleChange, handleBlur }) => (
-            <FormStyled onSubmit={handleSubmit}>
+            <Form onSubmit={handleSubmit}>
               <Grid container spacing={2}>
                 <Grid item md={6} sm={6} xs={12}>
                   <TextField
@@ -89,7 +74,7 @@ function SignUpWithFormik () {
                     onChange={handleChange}
                     onBlur={handleBlur}
                   />
-                  <ErrorMessage component={ErrorStyled} name="firstName" />
+                  <ErrorMessage component={Error} name="firstName" />
                 </Grid>
                 <Grid item md={6} sm={6} xs={12}>
                   <TextField
@@ -103,10 +88,10 @@ function SignUpWithFormik () {
                     onChange={handleChange}
                     onBlur={handleBlur}
                   />
-                  <ErrorMessage component={ErrorStyled} name="lastName" />
+                  <ErrorMessage component={Error} name="lastName" />
                 </Grid>
                 <Grid item md={12} sm={12} xs={12}>
-                  <FormControlStyled variant="outlined" fullWidth required>
+                  <FormControl variant="outlined" fullWidth required>
                     <InputLabel ref={inputLabel} htmlFor="outlined-age-native-simple">
                       Age
                     </InputLabel>
@@ -121,8 +106,8 @@ function SignUpWithFormik () {
                       <option value="20">Twenty</option>
                       <option value="30">Thirty</option>
                     </Select>
-                  </FormControlStyled>
-                  <ErrorMessage component={ErrorStyled} name="age" />
+                  </FormControl>
+                  <ErrorMessage component={Error} name="age" />
                 </Grid>
                 <Grid item md={12} sm={12} xs={12}>
                   <TextField
@@ -136,7 +121,7 @@ function SignUpWithFormik () {
                     onChange={handleChange}
                     onBlur={handleBlur}
                   />
-                  <ErrorMessage component={ErrorStyled} name="email" />
+                  <ErrorMessage component={Error} name="email" />
                 </Grid>
                 <Grid item md={12} sm={12} xs={12}>
                   <TextField
@@ -151,7 +136,7 @@ function SignUpWithFormik () {
                     onChange={handleChange}
                     onBlur={handleBlur}
                   />
-                  <ErrorMessage component={ErrorStyled} name="password" />
+                  <ErrorMessage component={Error} name="password" />
                 </Grid>
                 <Grid item md={12} sm={12} xs={12}>
                   <FormControlLabel
@@ -182,10 +167,10 @@ function SignUpWithFormik () {
                   </Link>
                 </Grid>
               </Grid>
-            </FormStyled>
+            </Form>
           )}
         />
-      </FormContainerStyled>
+      </FormContainer>
       <Box mt={5}>
         <Typography variant="body2" color="textSecondary" align="center">
           {'Juggernaut Demo - '}

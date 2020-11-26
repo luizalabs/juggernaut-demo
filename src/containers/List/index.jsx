@@ -1,16 +1,11 @@
 import React from 'react'
-import Divider from '@material-ui/core/Divider'
-import List from '@material-ui/core/List'
-import ListItem from '@material-ui/core/ListItem'
-import ListItemIcon from '@material-ui/core/ListItemIcon'
-import ListItemText from '@material-ui/core/ListItemText'
-import InboxIcon from '@material-ui/icons/Inbox'
-import DraftsIcon from '@material-ui/icons/Drafts'
-import { ContainerStyled } from './style'
+import { Divider, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core'
+import { Inbox as InboxIcon, Drafts as DraftsIcon } from '@material-ui/icons'
+import { Container } from './style'
 
 function SimpleList () {
   return (
-    <ContainerStyled
+    <Container
       container
       alignItems="center"
       justify="space-around"
@@ -38,7 +33,7 @@ function SimpleList () {
           <ListItemText primary="Spam" />
         </ListItem >
       </List>
-    </ContainerStyled>
+    </Container>
   )
 }
 

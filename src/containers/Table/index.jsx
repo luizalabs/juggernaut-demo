@@ -1,9 +1,6 @@
 import React from 'react'
-import TableBody from '@material-ui/core/TableBody'
-import TableCell from '@material-ui/core/TableCell'
-import TableHead from '@material-ui/core/TableHead'
-import TableRow from '@material-ui/core/TableRow'
-import { ContainerStyled, PaperStyled, TableStyled } from './style'
+import { TableBody, TableCell, TableHead, TableRow } from '@material-ui/core'
+import { Container, Paper, Table } from './style'
 
 const createData = (name, calories, fat, carbs, protein) => ({ name, calories, fat, carbs, protein })
 
@@ -19,9 +16,9 @@ const rows = [
 
 function SimpleTable () {
   return (
-    <ContainerStyled component="main" maxWidth="lg">
-      <PaperStyled>
-        <TableStyled>
+    <Container component="main" maxWidth="lg">
+      <Paper>
+        <Table>
           <TableHead>
             <TableRow>
               <TableCell>Personagem</TableCell>
@@ -44,9 +41,9 @@ function SimpleTable () {
               </TableRow>
             ))}
           </TableBody>
-        </TableStyled>
-      </PaperStyled>
-    </ContainerStyled>
+        </Table>
+      </Paper>
+    </Container>
   )
 }
 
