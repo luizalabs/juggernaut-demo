@@ -12,7 +12,7 @@ import toolbar from 'assets/images/toolbar.png'
 import list from 'assets/images/list.png'
 import logo from 'assets/images/juggernaut.gif'
 import Copyright from './Copyright'
-import { GridItemStyled, CardStyled, CardMediaStyled, CardContentStyled, ImgStyled, HomeStyled } from './style'
+import { GridItem, Card, CardMedia, CardContent, Image, Wrapper } from './style'
 
 const layouts = [
   {
@@ -96,18 +96,18 @@ const layouts = [
 
 function Home () {
   return (
-    <HomeStyled>
+    <Wrapper>
       <Container component="main" fixed>
         <Grid container justify="center" className="mb-4">
           <Grid item>
-            <ImgStyled src={logo} alt="logo juggernaut" />
+            <Image src={logo} alt="logo juggernaut" />
           </Grid>
         </Grid>
         <Grid container spacing={2} justify="center">
           {layouts.map(layout => (
-            <GridItemStyled item sm={6} md={4} key={layout.title}>
-              <CardStyled>
-                <CardMediaStyled
+            <GridItem item sm={6} md={4} key={layout.title}>
+              <Card>
+                <CardMedia
                   component="a"
                   href={layout.href}
                   image={layout.src}
@@ -115,24 +115,24 @@ function Home () {
                   rel="nofollow"
                   target="_blank"
                 />
-                <CardContentStyled>
+                <CardContent>
                   <Typography gutterBottom variant="h5" align="left" component="h2">
                     {layout.title}
                   </Typography>
                   <Typography component="p">{layout.description}</Typography>
-                </CardContentStyled>
+                </CardContent>
                 <CardActions>
                   <Button component="a" target="_blank" href={layout.source} size="small" color="primary">
                     Source code
                   </Button>
                 </CardActions>
-              </CardStyled>
-            </GridItemStyled>
+              </Card>
+            </GridItem>
           ))}
         </Grid>
       </Container>
       <Copyright />
-    </HomeStyled>
+    </Wrapper>
   )
 }
 

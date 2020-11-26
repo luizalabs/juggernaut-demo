@@ -1,16 +1,11 @@
 import styled from 'styled-components'
-import Card from '@material-ui/core/Card'
-import CardMedia from '@material-ui/core/CardMedia'
+import MuiCard from '@material-ui/core/Card'
+import MuiCardMedia from '@material-ui/core/CardMedia'
 
-const CardStyled = styled(Card)`
+export const Card = styled(MuiCard)`
   margin-top: ${({ theme }) => theme.spacing(10)}px;
 `
 
-const CardMediaStyled = styled(CardMedia)`
+export const CardMedia = styled(MuiCardMedia)`
   height: 140px;
 `
-
-export {
-  CardStyled,
-  CardMediaStyled
-}

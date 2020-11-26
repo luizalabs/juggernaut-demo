@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
-import Button from '@material-ui/core/Button'
-import Menu from '@material-ui/core/Menu'
-import MenuItem from '@material-ui/core/MenuItem'
-import { ContainerStyled } from './style'
+import { Button, Menu, MenuItem } from '@material-ui/core'
+import { Container } from './style'
 
 function SimpleMenu () {
   const [anchorEl, setAnchorEl] = useState(null)
@@ -16,7 +14,7 @@ function SimpleMenu () {
   }
 
   return (
-    <ContainerStyled
+    <Container
       container
       alignItems="center"
       justify="space-around"
@@ -41,7 +39,7 @@ function SimpleMenu () {
         <MenuItem onClick={handleClose}>My account</MenuItem>
         <MenuItem onClick={handleClose}>Logout</MenuItem>
       </Menu>
-    </ContainerStyled>
+    </Container>
   )
 }
 

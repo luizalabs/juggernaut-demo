@@ -1,19 +1,14 @@
 import React from 'react'
-import CardActionArea from '@material-ui/core/CardActionArea'
-import CardActions from '@material-ui/core/CardActions'
-import CardContent from '@material-ui/core/CardContent'
-import Container from '@material-ui/core/Container'
-import Button from '@material-ui/core/Button'
-import Typography from '@material-ui/core/Typography'
+import { CardActionArea, CardActions, CardContent, Container, Button, Typography } from '@material-ui/core'
 import dogs from 'assets/images/two-dogs.jpg'
-import { CardStyled, CardMediaStyled } from './style'
+import { Card, CardMedia } from './style'
 
-function Card () {
+function CardDemo () {
   return (
     <Container component="main" maxWidth="xs">
-      <CardStyled>
+      <Card>
         <CardActionArea>
-          <CardMediaStyled
+          <CardMedia
             image={dogs}
             title="Contemplative Reptile"
           />
@@ -34,9 +29,9 @@ function Card () {
             Learn More
           </Button>
         </CardActions>
-      </CardStyled>
+      </Card>
     </Container>
   )
 }
 
-export default Card
+export default CardDemo
