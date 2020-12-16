@@ -1,10 +1,6 @@
 import styled from 'styled-components'
-import Paper from '@material-ui/core/Paper'
+import MuiPaper from '@material-ui/core/Paper'
 
-const PaperStyled = styled(Paper)`
+export const Paper = styled(MuiPaper)`
   flex-grow: 1;
 `
-
-export {
-  PaperStyled
-}

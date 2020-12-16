@@ -1,24 +1,16 @@
 import styled from 'styled-components'
-import Container from '@material-ui/core/Container'
-import Paper from '@material-ui/core/Paper'
-import Table from '@material-ui/core/Table'
+import { Container as MuiContainer, Paper as MuiPaper, Table as MuiTable } from '@material-ui/core'
 
-const ContainerStyled = styled(Container)`
+export const Container = styled(MuiContainer)`
   margin-top: ${({ theme }) => theme.spacing(3)}px;
 `
 
-const PaperStyled = styled(Paper)`
+export const Paper = styled(MuiPaper)`
   width: 100%;
   margin-top: ${({ theme }) => theme.spacing(3)}px;
   overflow-x: auto;
 `
 
-const TableStyled = styled(Table)`
+export const Table = styled(MuiTable)`
   min-width: 650px;
 `
-
-export {
-  ContainerStyled,
-  PaperStyled,
-  TableStyled
-}

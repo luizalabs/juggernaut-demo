@@ -1,25 +1,23 @@
 import React from 'react'
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import Button from '@material-ui/core/Button'
+import { AppBar, Toolbar, Button } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
-import { ToolbarStyled, IconButtonStyled, TypographyStyled } from './style'
+import { Container, IconButton, Typography } from './style'
 
-const AppToolbar = () => {
+function AppToolbar () {
   return (
-    <ToolbarStyled>
+    <Container>
       <AppBar position="static">
         <Toolbar>
-          <IconButtonStyled edge="start" color="inherit" aria-label="menu">
+          <IconButton edge="start" color="inherit" aria-label="menu">
             <MenuIcon />
-          </IconButtonStyled>
-          <TypographyStyled variant="h6">
+          </IconButton>
+          <Typography variant="h6">
             Juggernaut
-          </TypographyStyled>
+          </Typography>
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
-    </ToolbarStyled>
+    </Container>
   )
 }
 

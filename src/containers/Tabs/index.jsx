@@ -1,6 +1,7 @@
 import React, { useState, Fragment } from 'react'
+import PropTypes from 'prop-types'
 import { Box, Tabs as TabsComponent, Tab, Typography } from '@material-ui/core'
-import { PaperStyled } from './style'
+import { Paper } from './style'
 
 function TabPanel (props) {
   const { children, value, index, ...other } = props
@@ -19,6 +20,16 @@ function TabPanel (props) {
   )
 }
 
+TabPanel.defaultProps = {
+  value: 0
+}
+
+TabPanel.propTypes = {
+  children: PropTypes.node.isRequired,
+  value: PropTypes.number,
+  index: PropTypes.number.isRequired
+}
+
 function Tabs () {
   const [value, setValue] = useState(0)
 
@@ -28,7 +39,7 @@ function Tabs () {
 
   return (
     <Fragment>
-      <PaperStyled>
+      <Paper>
         <TabsComponent
           value={value}
           onChange={handleChange}
@@ -40,7 +51,7 @@ function Tabs () {
           <Tab label="Item Two" disabled />
           <Tab label="Item Three" />
         </TabsComponent>
-      </PaperStyled>
+      </Paper>
       <TabPanel value={value} index={0}>
         Item One
       </TabPanel>

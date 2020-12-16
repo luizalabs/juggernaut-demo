@@ -11,14 +11,14 @@ const ALERT = 'ALERT'
 const MAX_WIDTH = 'MAX-WIDTH'
 const FULL_SCREEN = 'FULL-SCREEN'
 
-function Modal() {
+function Modal () {
   const [opened, setOpened] = React.useState('')
 
   const handleClose = () => setOpened('')
-  const openModal = (value) => setOpened(value)
+  const openModal = value => setOpened(value)
 
   const modalProps = { opened, openModal, handleClose }
-  
+
   return (
     <ButtonsContainer
       container

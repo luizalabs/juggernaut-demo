@@ -1,21 +1,14 @@
 import styled from 'styled-components'
-import IconButton from '@material-ui/core/IconButton'
-import Typography from '@material-ui/core/Typography'
+import { IconButton as MuiIconButton, Typography as MuiTypography } from '@material-ui/core'
 
-const ToolbarStyled = styled.div`
+export const Container = styled.div`
   flex-grow: 1;
 `
 
-const IconButtonStyled = styled(IconButton)`
+export const IconButton = styled(MuiIconButton)`
   margin-right: ${({ theme }) => theme.spacing(2)}px;
 `
 
-const TypographyStyled = styled(Typography)`
+export const Typography = styled(MuiTypography)`
   flex-grow: 1;
 `
-
-export {
-  TypographyStyled,
-  IconButtonStyled,
-  ToolbarStyled
-}

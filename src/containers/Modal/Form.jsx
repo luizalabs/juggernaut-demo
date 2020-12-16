@@ -1,14 +1,8 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
-import Button from '@material-ui/core/Button'
-import Dialog from '@material-ui/core/Dialog'
-import DialogActions from '@material-ui/core/DialogActions'
-import DialogContent from '@material-ui/core/DialogContent'
-import DialogContentText from '@material-ui/core/DialogContentText'
-import DialogTitle from '@material-ui/core/DialogTitle'
-import TextField from '@material-ui/core/TextField'
+import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, TextField } from '@material-ui/core'
 
-function Form({ open, handleClose }) {
+function Form ({ open, handleClose }) {
   return (
     <Dialog open={open} onClose={handleClose}>
       <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
@@ -38,9 +32,13 @@ function Form({ open, handleClose }) {
   )
 }
 
+Form.defaultProps = {
+  open: false
+}
+
 Form.propTypes = {
   open: PropTypes.bool,
-  handleClose: PropTypes.func
+  handleClose: PropTypes.func.isRequired
 }
 
 export default memo(Form)
