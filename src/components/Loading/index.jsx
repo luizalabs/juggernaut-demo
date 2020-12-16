@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { memo } from 'react'
 import CircularProgress from '@material-ui/core/CircularProgress'
-import LoadingStyled from './style'
+import { Container } from './styles'
 
 const Loading = () => (
-  <LoadingStyled>
+  <Container>
     <CircularProgress />
-  </LoadingStyled>
+  </Container>
 )
 
-export default Loading
+export default memo(Loading)

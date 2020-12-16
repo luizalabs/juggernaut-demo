@@ -1,29 +1,14 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
-import AppBar from '@material-ui/core/AppBar'
-import Button from '@material-ui/core/Button'
-import CloseIcon from '@material-ui/icons/Close'
-import Dialog from '@material-ui/core/Dialog'
-import Divider from '@material-ui/core/Divider'
-import IconButton from '@material-ui/core/IconButton'
-import ListItemText from '@material-ui/core/ListItemText'
-import ListItem from '@material-ui/core/ListItem'
-import List from '@material-ui/core/List'
-import Slide from '@material-ui/core/Slide'
-import Toolbar from '@material-ui/core/Toolbar'
-import Typography from '@material-ui/core/Typography'
+import { AppBar, Button, Dialog, Divider, IconButton, ListItemText, ListItem, List, Toolbar, Typography } from '@material-ui/core'
+import { Close as CloseIcon } from '@material-ui/icons'
 
-const Transition = React.forwardRef((props, ref) => (
-  <Slide direction="up" ref={ref} {...props} />
-))
-
-function FullScreen({ open, handleClose }) {
+function FullScreen ({ open, handleClose }) {
   return (
     <Dialog
       fullScreen
       open={open}
       onClose={handleClose}
-      TransitionComponent={Transition}
     >
       <AppBar style={{ position: 'relative' }}>
         <Toolbar>
@@ -51,9 +36,13 @@ function FullScreen({ open, handleClose }) {
   )
 }
 
+FullScreen.defaultProps = {
+  open: false
+}
+
 FullScreen.propTypes = {
   open: PropTypes.bool,
-  handleClose: PropTypes.func
+  handleClose: PropTypes.func.isRequired
 }
 
 export default memo(FullScreen)

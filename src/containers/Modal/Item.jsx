@@ -1,9 +1,8 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
-import Button from '@material-ui/core/Button'
-import Grid from '@material-ui/core/Grid'
+import { Button, Grid } from '@material-ui/core'
 
-function Item({ type, opened, openModal, handleClose, modal: Modal }) {
+function Item ({ type, opened, openModal, handleClose, modal: Modal }) {
   return (
     <Grid container item xs={12} md={3} justify="center" alignItems="center">
       <Button
@@ -21,12 +20,16 @@ function Item({ type, opened, openModal, handleClose, modal: Modal }) {
   )
 }
 
+Item.defaultProps = {
+  opened: ''
+}
+
 Item.propTypes = {
-  type: PropTypes.string,
+  type: PropTypes.string.isRequired,
   opened: PropTypes.string,
-  openModal: PropTypes.func,
-  handleClose: PropTypes.func,
-  modal: PropTypes.elementType
+  openModal: PropTypes.func.isRequired,
+  handleClose: PropTypes.func.isRequired,
+  modal: PropTypes.elementType.isRequired
 }
 
 export default memo(Item)

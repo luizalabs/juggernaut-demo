@@ -1,29 +1,22 @@
 import React from 'react'
-import Button from '@material-ui/core/Button'
-import CssBaseline from '@material-ui/core/CssBaseline'
-import TextField from '@material-ui/core/TextField'
-import FormControlLabel from '@material-ui/core/FormControlLabel'
-import Checkbox from '@material-ui/core/Checkbox'
-import Link from '@material-ui/core/Link'
-import Grid from '@material-ui/core/Grid'
-import Box from '@material-ui/core/Box'
+import { Button, CssBaseline, TextField, FormControlLabel, Checkbox, Link, Grid, Box, Typography, Container } from '@material-ui/core'
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined'
-import Typography from '@material-ui/core/Typography'
-import Container from '@material-ui/core/Container'
-import { FormContainerStyled, FormStyled, AvatarStyled } from './style'
+import Form from 'components/Form'
+import Avatar from 'components/Avatar'
+import FormContainer from 'components/Form/Container'
 
-function SignUp() {
+function SignUp () {
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
-      <FormContainerStyled>
-        <AvatarStyled>
+      <FormContainer>
+        <Avatar>
           <LockOutlinedIcon />
-        </AvatarStyled>
+        </Avatar>
         <Typography component="h1" variant="h5">
           Sign up
         </Typography>
-        <FormStyled>
+        <Form>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -35,7 +28,7 @@ function SignUp() {
                 label="First Name"
                 autoComplete="fname"
                 autoFocus
-                />
+              />
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -94,8 +87,8 @@ function SignUp() {
               </Link>
             </Grid>
           </Grid>
-        </FormStyled>
-      </FormContainerStyled>
+        </Form>
+      </FormContainer>
       <Box mt={5}>
         <Typography variant="body2" color="textSecondary" align="center">
           {'Juggernaut Demo - '}

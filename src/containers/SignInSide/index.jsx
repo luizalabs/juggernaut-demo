@@ -1,28 +1,23 @@
 import React from 'react'
-import Button from '@material-ui/core/Button'
-import TextField from '@material-ui/core/TextField'
-import FormControlLabel from '@material-ui/core/FormControlLabel'
-import Checkbox from '@material-ui/core/Checkbox'
-import Link from '@material-ui/core/Link'
-import Paper from '@material-ui/core/Paper'
-import Grid from '@material-ui/core/Grid'
+import { Button, TextField, FormControlLabel, Checkbox, Link, Paper, Grid, Typography } from '@material-ui/core'
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined'
-import Typography from '@material-ui/core/Typography'
-import { ContainerStyled, SideImageStyld, FormStyled, AvatarStyled, SignInStyled } from './style'
+import Form from 'components/Form'
+import Avatar from 'components/Avatar'
+import { Container, SideImage, SignIn } from './style'
 
-function SignInSide() {
+function SignInSide () {
   return (
-    <ContainerStyled container component="main">
-      <SideImageStyld item xs={false} sm={4} md={7} />
+    <Container container component="main">
+      <SideImage item xs={false} sm={4} md={7} />
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
-        <SignInStyled>
-          <AvatarStyled>
+        <SignIn>
+          <Avatar>
             <LockOutlinedIcon />
-          </AvatarStyled>
+          </Avatar>
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
-          <FormStyled noValidate>
+          <Form noValidate>
             <TextField
               variant="outlined"
               margin="normal"
@@ -66,14 +61,14 @@ function SignInSide() {
               </Grid>
               <Grid item>
                 <Link href="#" variant="body2">
-                  Don't have an account? Sign Up
+                  Don`t have an account? Sign Up
                 </Link>
               </Grid>
             </Grid>
-          </FormStyled>
-        </SignInStyled>
+          </Form>
+        </SignIn>
       </Grid>
-    </ContainerStyled>
+    </Container>
   )
 }
 
