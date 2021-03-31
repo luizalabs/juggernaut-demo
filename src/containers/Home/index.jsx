@@ -20,77 +20,77 @@ const layouts = [
     description: 'A simple Sign In page.',
     src: signIn,
     href: '/demo/sign-in/',
-    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/SignIn'
+    source: 'https://github.com/luizalabs/juggernaut-demo/tree/master/src/containers/SignIn'
   },
   {
     title: 'Sign-in side',
     description: 'A simple Sign In side page.',
     src: signInSide,
     href: '/demo/sign-in-side/',
-    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/SignInSide'
+    source: 'https://github.com/luizalabs/juggernaut-demo/tree/master/src/containers/SignInSide'
   },
   {
     title: 'Sign Up',
     description: 'A simple Sign Up page.',
     src: signUp,
     href: '/demo/sign-up/',
-    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/SignUp'
+    source: 'https://github.com/luizalabs/juggernaut-demo/tree/master/src/containers/SignUp'
   },
   {
     title: 'Sign Up With Formik',
     description: 'A simple Sign Up page with Formik.',
     src: signUp,
     href: '/demo/sign-up-with-formik/',
-    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/SignUpWithFormik'
+    source: 'https://github.com/luizalabs/juggernaut-demo/tree/master/src/containers/SignUpWithFormik'
   },
   {
     title: 'Modal',
     description: 'Simple modal examples.',
     src: modal,
     href: '/demo/modal/',
-    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/Modal'
+    source: 'https://github.com/luizalabs/juggernaut-demo/tree/master/src/containers/Modal'
   },
   {
     title: 'Tabs',
     description: 'Simple tabs example.',
     src: tabs,
     href: '/demo/tabs/',
-    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/Tabs'
+    source: 'https://github.com/luizalabs/juggernaut-demo/tree/master/src/containers/Tabs'
   },
   {
     title: 'Menu',
     description: 'A simple menu example.',
     src: menu,
     href: '/demo/menu/',
-    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/Menu'
+    source: 'https://github.com/luizalabs/juggernaut-demo/tree/master/src/containers/Menu'
   },
   {
     title: 'Table',
     description: 'A simple Table example.',
     src: table,
     href: '/demo/table/',
-    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/Table'
+    source: 'https://github.com/luizalabs/juggernaut-demo/tree/master/src/containers/Table'
   },
   {
     title: 'Card',
     description: 'Simple card example.',
     src: card,
     href: '/demo/card/',
-    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/Card'
+    source: 'https://github.com/luizalabs/juggernaut-demo/tree/master/src/containers/Card'
   },
   {
     title: 'Toolbar',
     description: 'A simple Toolbar example.',
     src: toolbar,
     href: '/demo/toolbar/',
-    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/Toolbar'
+    source: 'https://github.com/luizalabs/juggernaut-demo/tree/master/src/containers/Toolbar'
   },
   {
     title: 'List',
     description: 'A simple list of items example.',
     src: list,
     href: '/demo/list/',
-    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/List'
+    source: 'https://github.com/luizalabs/juggernaut-demo/tree/master/src/containers/List'
   }
 ]
 
