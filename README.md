@@ -6,6 +6,10 @@
 
 Step by step to get this up and running
 
+## :pencil: Requirements
+
+This boilerplate supports Node.js from version v14.x
+
 ### Clone repo and go to project folder
 
 > git clone https://github.com/SoftboxLab/juggernaut-demo.git && cd juggernaut-demo
