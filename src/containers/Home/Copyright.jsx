@@ -6,7 +6,7 @@ function Copyright() {
   return (
     <TypographyStyled variant="body2" color="textSecondary" align="center" className="my-3">
       <Link color="inherit" href="https://softbox.com.br/">
-        Copyright © Softbox.
+        Copyright © Luizalabs.
       </Link>
       <span className="ml-1">Built with</span>
       <IconStyled width="16px" height="16px" />
@@ -18,3 +18,4 @@ function Copyright() {
 }
 
 export default Copyright
+
