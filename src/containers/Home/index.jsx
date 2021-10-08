@@ -10,6 +10,7 @@ import card from 'assets/images/card.png'
 import tabs from 'assets/images/tabs.png'
 import toolbar from 'assets/images/toolbar.png'
 import list from 'assets/images/list.png'
+import textField from 'assets/images/text-field.png'
 import logo from 'assets/images/juggernaut.gif'
 import Copyright from './Copyright'
 import { GridItem, Card, CardMedia, CardContent, Image, Wrapper } from './style'
@@ -91,6 +92,13 @@ const layouts = [
     src: list,
     href: '/demo/list/',
     source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/List'
+  },
+  {
+    title: 'TextField',
+    description: 'Some simple text fields.',
+    src: textField,
+    href: '/demo/text-field/',
+    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/TextField'
   }
 ]
 
