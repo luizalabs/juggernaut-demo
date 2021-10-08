@@ -1,5 +1,6 @@
 import { lazy } from 'react'
 
+const TextField = lazy(() => import('containers/TextField'))
 const SignIn = lazy(() => import('containers/SignIn'))
 const SignInSide = lazy(() => import('containers/SignInSide'))
 const SignUp = lazy(() => import('containers/SignUp'))
@@ -66,6 +67,11 @@ const demo = [
   {
     path: '/demo/list',
     main: List,
+    exact: true
+  },
+  {
+    path: '/demo/text-field',
+    main: TextField,
     exact: true
   }
 ]
