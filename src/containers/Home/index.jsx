@@ -133,6 +133,9 @@ function Home () {
                   <Button component="a" target="_blank" href={layout.source} size="small" color="primary">
                     Source code
                   </Button>
+                  <Button component="a" target="_blank" href={layout.href} size="small">
+                    View
+                  </Button>
                 </CardActions>
               </Card>
             </GridItem>
