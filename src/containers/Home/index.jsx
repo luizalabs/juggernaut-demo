@@ -12,7 +12,6 @@ import toolbar from 'assets/images/toolbar.png'
 import list from 'assets/images/list.png'
 import textField from 'assets/images/text-field.png'
 import logo from 'assets/images/juggernaut.gif'
-import Copyright from './Copyright'
 import { GridItem, Card, CardMedia, CardContent, Image, Wrapper } from './style'
 
 const layouts = [
@@ -142,7 +141,6 @@ function Home () {
           ))}
         </Grid>
       </Container>
-      <Copyright />
     </Wrapper>
   )
 }
