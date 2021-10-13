@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from '@material-ui/core'
-import { Typography, Icon } from './style'
+import { Typography, Icon } from '../../containers/Home/style'
 
 function Copyright () {
   return (
