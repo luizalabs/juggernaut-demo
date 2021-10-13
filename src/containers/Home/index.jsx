@@ -17,18 +17,39 @@ import { GridItem, Card, CardMedia, CardContent, Image, Wrapper } from './style'
 
 const layouts = [
   {
+    title: 'Card',
+    description: 'Simple card example.',
+    src: card,
+    href: '/demo/card/',
+    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/Card'
+  },
+  {
+    title: 'List',
+    description: 'A simple list of items example.',
+    src: list,
+    href: '/demo/list/',
+    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/List'
+  },
+  {
+    title: 'Menu',
+    description: 'A simple menu example.',
+    src: menu,
+    href: '/demo/menu/',
+    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/Menu'
+  },
+  {
+    title: 'Modal',
+    description: 'Simple modal examples.',
+    src: modal,
+    href: '/demo/modal/',
+    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/Modal'
+  },
+  {
     title: 'Sign In',
     description: 'A simple Sign In page.',
     src: signIn,
     href: '/demo/sign-in/',
     source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/SignIn'
-  },
-  {
-    title: 'Sign-in side',
-    description: 'A simple Sign In side page.',
-    src: signInSide,
-    href: '/demo/sign-in-side/',
-    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/SignInSide'
   },
   {
     title: 'Sign Up',
@@ -45,25 +66,11 @@ const layouts = [
     source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/SignUpWithFormik'
   },
   {
-    title: 'Modal',
-    description: 'Simple modal examples.',
-    src: modal,
-    href: '/demo/modal/',
-    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/Modal'
-  },
-  {
-    title: 'Tabs',
-    description: 'Simple tabs example.',
-    src: tabs,
-    href: '/demo/tabs/',
-    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/Tabs'
-  },
-  {
-    title: 'Menu',
-    description: 'A simple menu example.',
-    src: menu,
-    href: '/demo/menu/',
-    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/Menu'
+    title: 'Sign-in side',
+    description: 'A simple Sign In side page.',
+    src: signInSide,
+    href: '/demo/sign-in-side/',
+    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/SignInSide'
   },
   {
     title: 'Table',
@@ -73,25 +80,11 @@ const layouts = [
     source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/Table'
   },
   {
-    title: 'Card',
-    description: 'Simple card example.',
-    src: card,
-    href: '/demo/card/',
-    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/Card'
-  },
-  {
-    title: 'Toolbar',
-    description: 'A simple Toolbar example.',
-    src: toolbar,
-    href: '/demo/toolbar/',
-    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/Toolbar'
-  },
-  {
-    title: 'List',
-    description: 'A simple list of items example.',
-    src: list,
-    href: '/demo/list/',
-    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/List'
+    title: 'Tabs',
+    description: 'Simple tabs example.',
+    src: tabs,
+    href: '/demo/tabs/',
+    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/Tabs'
   },
   {
     title: 'TextField',
@@ -99,6 +92,13 @@ const layouts = [
     src: textField,
     href: '/demo/text-field/',
     source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/TextField'
+  },
+  {
+    title: 'Toolbar',
+    description: 'A simple Toolbar example.',
+    src: toolbar,
+    href: '/demo/toolbar/',
+    source: 'https://github.com/SoftboxLab/juggernaut-demo/tree/master/src/containers/Toolbar'
   }
 ]
 
