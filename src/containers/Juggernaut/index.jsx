@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components'
 import { CssBaseline } from '@material-ui/core'
 import { MuiThemeProvider } from '@material-ui/core/styles'
 import GlobalStyle from 'common/styles/global'
+import Copyright from '../../components/copyright/Copyright'
 
 const Juggernaut = ({ children, theme }) => (
   <MuiThemeProvider theme={theme}>
@@ -12,6 +13,7 @@ const Juggernaut = ({ children, theme }) => (
         <CssBaseline />
         <GlobalStyle />
         {children}
+        <Copyright />
       </Fragment>
     </ThemeProvider>
   </MuiThemeProvider>
